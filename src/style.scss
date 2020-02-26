@@ -1,0 +1,154 @@
+$round-radius: 5px;
+$gap: 10px;
+
+.topnav {
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  top: 0;
+  overflow: hidden;
+  background-color: #29303b;
+  a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    border-bottom: 3px solid #29303b;
+  }
+  a:hover {
+    background-color: #ddd;
+    color: #29303b;
+    border-bottom: 3px solid red;
+  }
+  a.active {
+    background-color: #29303b;
+    color: white;
+  }
+}
+
+.topnav-right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    a,
+    .topnav-right {
+      float: none;
+      display: block;
+    }
+    .topnav-centered a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
+}
+
+.main-content {
+  margin-top: 61px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.book-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px 35px;
+
+  .book-item {
+    border: 2px #ccc solid;
+    box-shadow: 8px 8px 12px grey;
+    margin: 5px 5px 20px 5px;
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(236, 232, 232);
+    border-top-left-radius: $round-radius;
+    border-top-right-radius: $round-radius;
+
+    img {
+      display: block;
+      width: 200px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}
+
+.book {
+  margin-top: 60px;
+  display: flex;
+  padding: 20px 20px 20px 20px;
+
+  .book-text {
+    padding: 0px 0px 0px 20px;
+  }
+
+  img {
+    display: block;
+    width: 300px;
+    height: 500px;
+  }
+}
+
+.title-name {
+  font-size: xx-large;
+}
+
+.book-header {
+  font-weight: normal;
+  font-size: 1.3em;
+  color: #666;
+  margin-bottom: 10px;
+  background: #ececec;
+  padding: 5px;
+}
+
+.book-header-text {
+  margin: 15px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px 0;
+}
+
+.category-main {
+  display: flex;
+  .book-category-list {
+    width: 80%;
+  }
+  .category-list-wrapper {
+    border: 2px solid #29303b;
+    border-top: 0px solid #29303b;
+
+    width: 20%;
+    height: 100%;
+    .categories-list {
+      margin: 0px;
+      padding: 10px;
+      list-style-type: none;
+    }
+    .categories-item {
+      text-align: center;
+      border-bottom: 1px solid #29303b;
+    }
+  }
+}
+
+.category-list-title {
+  background-color: #29303b;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 2.5vw;
+  font-size: 1.5vw;
+  border: 2px solid white;
+}

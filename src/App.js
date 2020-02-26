@@ -1,25 +1,38 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
-import Header from "./components/Header";
-import BookList from "./components/BookList";
+import Header from "./components/Header/Header";
+import BookList from "./components/Book/BookList/BookList";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./style.scss";
+import Book from "./components/Book/Book";
+import Category from "./components/BookCategory/Category";
+import Author from "./components/BookAuthor/Author";
 
-export class App extends Component {
-  state = {
-    books: []
-  };
-  componentDidMount() {
-    fetch("https://localhost:44368/api/books")
-      .then(res => res.json())
-      .then(books => this.setState({ books }));
-  }
-  render() {
-    return (
+const App = () => {
+  return (
+    <Router>
       <div>
         <Header />
-        <BookList books={this.state.books} />
       </div>
-    );
-  }
-}
-
+      <Switch>
+        <Route path="/authors">
+          <div className="main-content">
+            <Author />
+          </div>
+        </Route>
+        <Route path="/categories">
+          <div className="main-content">
+            <Category />
+          </div>
+        </Route>
+        <Route path="/isbn/:isbn" component={Book} />
+        <Route path="/">
+          <div className="main-content">
+            <BookList />
+          </div>
+        </Route>
+      </Switch>
+    </Router>
+  );
+};
 export default App;
