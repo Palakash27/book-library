@@ -1,9 +1,9 @@
 import React from "react";
 import BookListItem from "./BookListItem";
-import useBooksHook from "./useBooksHook";
 
-const BookList = () => {
-  const books = useBooksHook();
+const BookList = props => {
+  const books = props.books;
+
   return (
     <React.Fragment>
       {!books && <div className="loading">Loading books...</div>}

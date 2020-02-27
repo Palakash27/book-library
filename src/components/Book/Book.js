@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const Book = props => {
   console.log("book param is", props.match.params.isbn);
-
   const book = useBookHook(props.match.params.isbn);
   const {
     isbn,
@@ -19,6 +18,7 @@ const Book = props => {
     authors = [],
     categories = []
   } = book;
+
   return (
     <React.Fragment>
       {!book && <div>Loading book...</div>}

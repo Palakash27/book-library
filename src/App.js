@@ -7,8 +7,11 @@ import "./style.scss";
 import Book from "./components/Book/Book";
 import Category from "./components/BookCategory/Category";
 import Author from "./components/BookAuthor/Author";
+import useBooksHook from "./components/Book/BookList/useBooksHook";
 
 const App = () => {
+  const books = useBooksHook();
+
   return (
     <Router>
       <div>
@@ -24,11 +27,10 @@ const App = () => {
         <Route path="/categories">
           <Category />
         </Route>
-
         <Route path="/isbn/:isbn" component={Book} />
         <Route exact path="/">
           <div className="main-content">
-            <BookList />
+            <BookList books={books} />
           </div>
         </Route>
       </Switch>
