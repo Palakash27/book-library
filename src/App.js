@@ -20,13 +20,13 @@ const App = () => {
             <Author />
           </div>
         </Route>
+        <Route path="/categories/:categoryName" component={Category}></Route>
         <Route path="/categories">
-          <div className="main-content">
-            <Category />
-          </div>
+          <Category />
         </Route>
+
         <Route path="/isbn/:isbn" component={Book} />
-        <Route path="/">
+        <Route exact path="/">
           <div className="main-content">
             <BookList />
           </div>

@@ -4,6 +4,8 @@ import Image from "../Image/Image";
 import { Link } from "react-router-dom";
 
 const Book = props => {
+  console.log("book param is", props.match.params.isbn);
+
   const book = useBookHook(props.match.params.isbn);
   const {
     isbn,
@@ -34,8 +36,12 @@ const Book = props => {
               Authors: |
               <span>
                 <i>
-                  {authors.map(author => (
-                    <Link to={`/authors/${author.name}`}>
+                  {authors.map((author, index) => (
+                    <Link
+                      className="author-name"
+                      key={index}
+                      to={`/authors/${author.name}`}
+                    >
                       {author.name + " | "}
                     </Link>
                   ))}
@@ -44,8 +50,8 @@ const Book = props => {
               <br />
               Categories: |
               <i>
-                {categories.map(category => (
-                  <Link to={`/categories/${category.name}`}>
+                {categories.map((category, index) => (
+                  <Link key={index} to={`/categories/${category.name}`}>
                     {category.name + " | "}
                   </Link>
                 ))}

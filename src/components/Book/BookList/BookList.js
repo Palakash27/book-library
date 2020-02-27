@@ -6,7 +6,7 @@ const BookList = () => {
   const books = useBooksHook();
   return (
     <React.Fragment>
-      {!books && <div>Loading books...</div>}
+      {!books && <div className="loading">Loading books...</div>}
       {books && (
         <ul className="book-list">
           {books.map(book => {

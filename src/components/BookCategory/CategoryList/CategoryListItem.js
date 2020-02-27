@@ -4,12 +4,7 @@ import { Link } from "react-router-dom";
 const CategoryListItem = props => {
   return (
     <li className="categories-item">
-      <Link
-        to={`/categories/${props.category}`}
-        onClick={() => props.onCategoryClicked(props.category)}
-      >
-        {props.category}
-      </Link>
+      <Link to={`/categories/${props.category}`}>{props.category}</Link>
     </li>
   );
 };

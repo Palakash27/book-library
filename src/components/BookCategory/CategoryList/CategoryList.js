@@ -13,24 +13,17 @@ const SortCategories = categories => {
   return newCategories.sort();
 };
 
-const CategoryList = props => {
+const CategoryList = () => {
   const categories = useCategoryHook();
-  console.log(categories);
-
   const sortedCategories = SortCategories(categories);
+
   return (
     <React.Fragment>
       {!sortedCategories && <div>Loading Categories...</div>}
       {sortedCategories && (
         <ul className="categories-list">
-          {sortedCategories.map(category => {
-            return (
-              <CategoryListItem
-                key={categories.id}
-                category={category}
-                onCategoryClicked={props.onCategoryClicked}
-              />
-            );
+          {sortedCategories.map((category, index) => {
+            return <CategoryListItem key={index} category={category} />;
           })}
         </ul>
       )}
