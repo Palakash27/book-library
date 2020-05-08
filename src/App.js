@@ -14,14 +14,11 @@ const App = () => {
 
   return (
     <Router>
-      <div>
-        <Header />
-      </div>
+      <div>{books && <Header books={books.map(book => book.title)} />}</div>
       <Switch>
+        <Route path="/authors/:authorName" component={Author}></Route>
         <Route path="/authors">
-          <div className="main-content">
-            <Author />
-          </div>
+          <Author />
         </Route>
         <Route path="/categories/:categoryName" component={Category}></Route>
         <Route path="/categories">

@@ -1,6 +1,6 @@
 import React from "react";
 import CategoryListItem from "./CategoryListItem";
-import useCategoryHook from "../useCategoryHook";
+import useCategoriesHook from "./useCategoriesHook";
 
 const SortCategories = categories => {
   let newCategories = [];
@@ -14,12 +14,12 @@ const SortCategories = categories => {
 };
 
 const CategoryList = () => {
-  const categories = useCategoryHook();
+  const categories = useCategoriesHook();
   const sortedCategories = SortCategories(categories);
 
   return (
     <React.Fragment>
-      {!sortedCategories && <div>Loading Categories...</div>}
+      {!sortedCategories && <div>Loading Categories</div>}
       {sortedCategories && (
         <ul className="categories-list">
           {sortedCategories.map((category, index) => {

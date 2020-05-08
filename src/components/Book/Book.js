@@ -37,12 +37,9 @@ const Book = props => {
               <span>
                 <i>
                   {authors.map((author, index) => (
-                    <Link
-                      className="author-name"
-                      key={index}
-                      to={`/authors/${author.name}`}
-                    >
-                      {author.name + " | "}
+                    <Link key={index} to={`/authors/${author.name}`}>
+                      <i className="author-name">{author.name}</i>
+                      {" | "}
                     </Link>
                   ))}
                 </i>
@@ -52,7 +49,8 @@ const Book = props => {
               <i>
                 {categories.map((category, index) => (
                   <Link key={index} to={`/categories/${category.name}`}>
-                    {category.name + " | "}
+                    <i className="category-name">{category.name}</i>
+                    {" | "}
                   </Link>
                 ))}
               </i>
