@@ -14,18 +14,30 @@ const App = () => {
 
   return (
     <Router>
-      <div>{books && <Header books={books.map(book => book.title)} />}</div>
+      <div>
+        {books && (
+          <Header
+          // books={books.map((book) => book.title)}
+          />
+        )}
+      </div>
       <Switch>
-        <Route path="/authors/:authorName" component={Author}></Route>
-        <Route path="/authors">
+        <Route
+          path="/book-library/authors/:authorName"
+          component={Author}
+        ></Route>
+        <Route path="/book-library/authors">
           <Author />
         </Route>
-        <Route path="/categories/:categoryName" component={Category}></Route>
-        <Route path="/categories">
+        <Route
+          path="/book-library/categories/:categoryName"
+          component={Category}
+        ></Route>
+        <Route path="/book-library/categories">
           <Category />
         </Route>
-        <Route path="/isbn/:isbn" component={Book} />
-        <Route exact path="/">
+        <Route path="/book-library/isbn/:isbn" component={Book} />
+        <Route exact path="/book-library/">
           <div className="main-content">
             <BookList books={books} />
           </div>

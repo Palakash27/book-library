@@ -5,7 +5,7 @@ import Image from "../../Image/Image";
 const BookListItem = ({ title, isbn, thumbnailUrl }) => {
   return (
     <li className="book-item">
-      <Link to={`/isbn/${isbn}`}>
+      <Link to={`/book-library/isbn/${isbn}`}>
         <Image src={thumbnailUrl} />
         <div className="title">{title.slice(0, 20)}...</div>
       </Link>

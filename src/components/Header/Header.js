@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchBar from "../SearchBar/SearchBar";
+// import SearchBar from "../SearchBar/SearchBar";
 
-const Header = props => {
+const Header = (props) => {
   return (
     <div className="topnav">
-      <Link className="active" to={"/"}>
+      <Link className="active" to={"/book-library/"}>
         <b>Book Library</b>
       </Link>
       <div className="topnav-right">
-        <SearchBar items={props.books} />
-        <Link to={"/"}>Home</Link>
-        <Link to={"/authors"}>Authors</Link>
-        <Link to={"/categories"}>Categories</Link>
-        <Link to={"/about"}>About</Link>
+        {/* <SearchBar items={props.books} /> */}
+        <Link to={"/book-library/"}>Home</Link>
+        <Link to={"/book-library/authors"}>Authors</Link>
+        <Link to={"/book-library/categories"}>Categories</Link>
+        <Link to={"/book-library/about"}>About</Link>
       </div>
     </div>
   );
