@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/book-library/static/css/main.9209f7f3.chunk.css",
-    "main.js": "/book-library/static/js/main.203335b5.chunk.js",
-    "main.js.map": "/book-library/static/js/main.203335b5.chunk.js.map",
+    "main.js": "/book-library/static/js/main.b820d387.chunk.js",
+    "main.js.map": "/book-library/static/js/main.b820d387.chunk.js.map",
     "runtime-main.js": "/book-library/static/js/runtime-main.ddfa8aa4.js",
     "runtime-main.js.map": "/book-library/static/js/runtime-main.ddfa8aa4.js.map",
     "static/js/2.cd36aecf.chunk.js": "/book-library/static/js/2.cd36aecf.chunk.js",
     "static/js/2.cd36aecf.chunk.js.map": "/book-library/static/js/2.cd36aecf.chunk.js.map",
     "index.html": "/book-library/index.html",
-    "precache-manifest.e87cb9ffb99a5f928a82918a21892189.js": "/book-library/precache-manifest.e87cb9ffb99a5f928a82918a21892189.js",
+    "precache-manifest.d9e14d4d79a1b08e9a70a2248e72fbdc.js": "/book-library/precache-manifest.d9e14d4d79a1b08e9a70a2248e72fbdc.js",
     "service-worker.js": "/book-library/service-worker.js",
     "static/css/main.9209f7f3.chunk.css.map": "/book-library/static/css/main.9209f7f3.chunk.css.map",
     "static/js/2.cd36aecf.chunk.js.LICENSE.txt": "/book-library/static/js/2.cd36aecf.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.ddfa8aa4.js",
     "static/js/2.cd36aecf.chunk.js",
     "static/css/main.9209f7f3.chunk.css",
-    "static/js/main.203335b5.chunk.js"
+    "static/js/main.b820d387.chunk.js"
   ]
 }
