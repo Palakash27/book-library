@@ -5,7 +5,7 @@ import BookList from "../Book/BookList/BookList";
 import useBooksHook from "../Book/BookList/useBooksHook";
 import useAuthorHook from "./useAuthorHook";
 
-const Author = props => {
+const Author = (props) => {
   let books = useBooksHook();
   let authorListTitle;
 
@@ -27,7 +27,7 @@ const Author = props => {
     <div className="author-main">
       <div className="author-list-wrapper">
         <div className="author-list-title">
-          <Link to={"/authors"}>AUTHORS</Link>
+          <Link to={"/book-library/authors"}>AUTHORS</Link>
         </div>
         <AuthorList />
       </div>

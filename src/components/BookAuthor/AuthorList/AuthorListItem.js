@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const AuthorListItem = props => {
+const AuthorListItem = (props) => {
   return (
     <li className="authors-item">
-      <Link to={`/authors/${props.author}`}>{props.author}</Link>
+      <Link to={`/book-library/authors/${props.author}`}>{props.author}</Link>
     </li>
   );
 };

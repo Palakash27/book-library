@@ -5,7 +5,7 @@ import BookList from "../Book/BookList/BookList";
 import useBooksHook from "../Book/BookList/useBooksHook";
 import useCategoryHook from "./useCategoryHook";
 
-const Category = props => {
+const Category = (props) => {
   let books = useBooksHook();
   let categoryListTitle;
 
@@ -26,7 +26,7 @@ const Category = props => {
     <div className="category-main">
       <div className="category-list-wrapper">
         <div className="category-list-title">
-          <Link to={"/categories"}>CATEGORIES</Link>
+          <Link to={"/book-library/categories"}>CATEGORIES</Link>
         </div>
         <CategoryList />
       </div>
